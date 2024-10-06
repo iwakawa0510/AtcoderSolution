@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-   const double PI = 3.141592653589;
+   const double PI = 3.141592653589;//円周率,
    double r;
    cin >> r;
    double Area = (r*r)*PI;//円の面積,
