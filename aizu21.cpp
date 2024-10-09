@@ -2,11 +2,18 @@
 using namespace std;
 
 int main(){
-    const int n;
+    int n;
     cin >> n;
     int input[n];
-    for (int i = 0; i<= n;i++){
-         cin >> a[i]
+    for (int i = 0;i <= n ;i++){
+         cin >> input[i];
+         }
+         
+         for (int i = n - 1; i >= 0; i--){
+            if (i != n - 1){
+            cout << " "; 
+            }
+            cout << input[i];
          }
     cout << endl;
 }
