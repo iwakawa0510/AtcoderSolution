@@ -24,8 +24,8 @@ int main(){
     for(int i =0;i < 4;i++){
         for(int j = 0;j < 13;j++){
         if(cards[i][j] == false)
-        cout <<  suits[i] << " " << (j-1) << endl;
+        cout <<  suits[i] << " " << (j+1) << endl;
         }
     }
     return 0;
-}
+} 
