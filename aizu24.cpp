@@ -19,16 +19,17 @@ int main(){
     }
     
     int matrixC[n]{0};
-    //行列AとBの積算して行列Cを求め結果を出力する,
+    //行列AとBの積算して行列Cを求める,
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m;j++){
-           matrixC[i] += matrixA[i][j]*matrixB[i];
+           matrixC[i] += matrixA[i][j]*matrixB[j];
            
         
         }  
-    for (int i = 0; i < n; i++) {
+    }
+    //結果を出力,
+     for (int i = 0; i < n; i++) {
         cout << matrixC[i] << endl;
     }    
-    }
     return 0;
 }
