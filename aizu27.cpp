@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//配列が動的な為良い解凍ではない,
 int main(){
     //データの初期化,
     int r,c;//行数,列数,
