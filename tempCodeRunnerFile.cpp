@@ -1,2 +1,2 @@
 
-    cout << cnt << endl;
+int main(){
