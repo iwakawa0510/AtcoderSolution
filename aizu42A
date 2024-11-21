@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+class Dice {
+private:
+    int surface[6];  // 各面の値を配列で管理
+    int top, front, left; // 現在の上面、前面、左面
+    int prev_top, prev_front, prev_left; // 回転前の状態を保存
+
+public:
+    // コンストラクタ
+    Dice(int input_surface[]) : top(1), front(2), left(4) {
+        for (int i = 0; i < 6; i++) {
+            surface[i] = input_surface[i];
+        }
+        // 初期状態を記録
+        prev_top = top;
+        prev_front = front;
+        prev_left = left;
+    }
+
+    // ダイスの回転を行う
+    void roll(int t, int f) {
+        // 現在の状態を保存しておく
+        prev_top = top;
+        prev_front = front;
+        prev_left = left;
+
+        // 新しい上面と前面を設定
+        top = t;
+        front = f;
+
+        // 面の位置を計算
+        int bottom = 7 - top;  // 7 - 上面で底面を求める
+        int back = 7 - front;  // 7 - 前面で背面を求める
+        left = 7 - (front + back);  // 左面は前面と背面の差から計算
+    }
+
+    // 右面の値を返す
+    int get_right_value() const {
+        int right = 7 - top - left - front; // 右面を計算
+        return surface[right - 1]; // インデックスは0からなので、right-1でアクセス
+    }
+
+    // 回転前の状態を返す（デバッグ用）
+    void get_previous_state() const {
+        cout << "Previous State: Top = " << prev_top << ", Front = " << prev_front << ", Left = " << prev_left << endl;
+    }
+};
+
+int main() {
+    // 各面の値を入力
+    int surface[6];
+    for (int i = 0; i < 6; i++) {
+        cin >> surface[i];
+    }
+
+    // ダイスを初期化
+    Dice dice(surface);
+
+    // 回転指示を読み取り実行
+    int q;
+    cin >> q;
+    int t, f;
+    for (int i = 0; i < q; i++) {
+        cin >> t >> f;
+        dice.roll(t, f);
+        cout << dice.get_right_value() << endl;
+
+        // 回転前の状態を表示（必要に応じて）
+        dice.get_previous_state();
+    }
+
+    return 0;
+}

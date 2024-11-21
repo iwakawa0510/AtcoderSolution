@@ -4,35 +4,30 @@ using namespace std;
 class Dice {
 private:
     int surface[6];  // 各面の値を配列で管理
-    int top, front, right; // 現在の上面、前面、右面
+    int top, front, left; // 現在の上面、前面、右面
 
 public:
     // コンストラクタ
-    Dice(int surfaces[]) : top(1), front(2), right(3) {
+    Dice(int input_surface[]) : top(1), front(2), left(4) {
         for (int i = 0; i < 6; i++) {
-            surface[i] = surfaces[i];
+            surface[i] = input_surface[i];
         }
     }
 
     // ダイスの回転を行う
-    void roll(int t,int r) {
-
-        //例外処理
-        if(t >= 7 or t <= 0){
-            return 1;
-            cout << "不正な値です。" << endl;
-        }
-        if(r >= 7 or random <= 0){
-            return 1;
-            cout << "不正な値です。" << endl;
-        }
+    void roll(int t,int f) {
         top = t;
-        right = r;
-        int bottom = 7 - top;
-        int back = 7 - front;
-        int left = 7 - right;
-    }
+        front = f; 
 
+        // 面の位置を計算
+        int bottom = 7 - top;  // 7 - 上面で底面を求める
+        int back = 7 - front;  // 7 - 前面で背面を求める
+        int left = 7 - (front + right);  // 左面は前面と右面の差から計算
+        right = 7 - front - back;
+    }
+    int get_right_value()const{
+    return surface[right - 1];
+    }
 };
 
 int main() {
@@ -48,10 +43,11 @@ int main() {
     // 回転指示を読み取り実行
     int q;
     cin >> q;
-    int t,r;
+    int t,f;
     for (int i = 0;i < q;i++) {
-        dice.roll(cin >> t,r);
-        
-    }
-    
+        cin >> t >> f;
+        dice.roll(t,f);
+        cout << dice.get_right_value() << endl;
+    }   
+    return 0;
 }

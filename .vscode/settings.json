@@ -51,7 +51,8 @@
         "ratio": "cpp",
         "semaphore": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "aizu42a": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
