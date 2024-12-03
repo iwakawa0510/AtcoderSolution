@@ -1,2 +1,2 @@
 
-            dice.rollNorth();
+private:
