@@ -1,3 +1,3 @@
-{
-                temp += coin_C*k;
-            //Xと等価かを評価,
+
+    cout << answer << endl;
+    return 0;
