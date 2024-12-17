@@ -52,7 +52,14 @@
         "semaphore": "cpp",
         "stop_token": "cpp",
         "thread": "cpp",
-        "aizu42a": "cpp"
+        "aizu42a": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "stacktrace": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
