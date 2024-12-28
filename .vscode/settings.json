@@ -59,7 +59,8 @@
         "ranges": "cpp",
         "span": "cpp",
         "regex": "cpp",
-        "stacktrace": "cpp"
+        "stacktrace": "cpp",
+        "valarray": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
