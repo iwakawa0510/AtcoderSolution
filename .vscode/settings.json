@@ -60,7 +60,8 @@
         "span": "cpp",
         "regex": "cpp",
         "stacktrace": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "set": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

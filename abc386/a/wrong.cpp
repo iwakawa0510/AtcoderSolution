@@ -13,7 +13,7 @@ int main(){
                 cout << "Yes" << endl;
                 return 0;
             }else if(A == !B and A){
-                cout << "No" << endl;
+                cout << "No" << endlr;
                 return 0;                
             }
         }else{
