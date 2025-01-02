@@ -61,7 +61,8 @@
         "regex": "cpp",
         "stacktrace": "cpp",
         "valarray": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "bitset": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
