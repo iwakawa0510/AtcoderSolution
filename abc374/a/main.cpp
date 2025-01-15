@@ -4,15 +4,11 @@
 #include <string>
 using namespace std;
 
- main(){ 
+ int main(){ 
     string S;
     cin >> S;
-    string keishou = (S.substr() - 3);
-    cout << keishou << endl;
-    return 0;
-
-    
-    if(keishou == "san"){
+   
+    if(S.substr(S.size()-3) == "san"){
         cout << "Yes" << endl;
     }else{
         cout << "No" << endl;
