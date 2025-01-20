@@ -1,3 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+// 2重ループの省略,
 int main () {
     int n, m;
     string str;
