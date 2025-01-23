@@ -20,7 +20,7 @@ int main(){
         }
         if(str.at(i) == 'O'){
             cnt_o++;
-            }
+        }
         if(cnt_o >= m){
             cnt_o = 0;
             ans++;
