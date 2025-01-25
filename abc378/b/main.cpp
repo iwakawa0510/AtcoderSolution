@@ -7,10 +7,9 @@ int main(){
     //入力,
     int n,m;
     cin >> n;
-    int q[110] = {};
-    int r[110] = {};
-    for(int i = 0;i <= n;i++){
-        if(i == 0)continue;
+    int q[110];
+    int r[110];
+    for(int i = 0;i < n;i++){
         cin >> q[i] >> r[i];
     }
     cin >> m;    
