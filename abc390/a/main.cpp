@@ -20,7 +20,7 @@ int main(){
         return 0;
     }
     int cnt2 = 0;
-    for(int i = 0;i < 5;i++){
+    for(int i = 0;i < 4;i++){
         for(int i = 0;i < 5;i++){
         temp_A[i] = A[i];
         }
