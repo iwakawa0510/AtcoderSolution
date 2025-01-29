@@ -10,7 +10,7 @@ int main(){
     int ans = 0;
     int n = min(S.size(),T.size());
     for(int i = 0;i < n;i++){
-        if(!S[i] == T[i]){
+        if(S[i] != T[i]){
             i++;
             ans += i;
             cout << ans << endl;
