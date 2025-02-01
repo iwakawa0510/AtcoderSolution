@@ -12,8 +12,8 @@ int main(){
     int n,m;
     cin >> n >> m;
 
-    vector<string> str_s(n,string(n));
-    vector<string> str_t(m,string(m));
+    vector<vector<string>> str_s(n,vector<string>(n));
+    vector<vector<string>> str_t(m,vector<string>(m));
     for(int i = 0;i < n;i++){
         for(int j = 0;j < n;j++){
             cin >> str_s[i][j];
@@ -28,15 +28,16 @@ int main(){
     //探索,
     int ans_l = 0;
     int ans_c = 0;
-    bool fished = 0;
+
+    int check_board(int m,int ans_l,int ans_c){
     for(int i = 0;i < m;i++){
         for(int j = 0;j < m;j++){ 
-        if(equal(str_s[i].begin(),str_s[i].end(),str_t[i].begin(),str_t[i].end())){
-        }else{break;
-        }
-        
+        if(str_s[i][j] != str_t[i][j])
+        ans_l += i;
+        ans_c += j;
+        break;
+            }
         }
     }
-    
     return 0;
 }
