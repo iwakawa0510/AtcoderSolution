@@ -25,7 +25,7 @@ int main(){
         }
         ans++;
     }
-    if(ans == 0){cout << ans << endl;
+    if(ans == 0){cout << an s << endl;
     return 0;
     }
     else{cout << ans+1 << endl;
