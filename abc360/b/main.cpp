@@ -14,7 +14,7 @@ int main(){
     for(int w = 1;w < S.size();w++){
         for(int c = 0;c < w;c++){
             string now = "";
-            for(int i = c;i < s.size();i += w){
+            for(int i = c;i < S.size();i += w){
                 now += S[i];
             } 
             if(now == T){
