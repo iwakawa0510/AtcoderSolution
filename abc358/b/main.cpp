@@ -10,8 +10,8 @@ using namespace std;
 int main(){ 
     int n,a;
     int ans = 0;
+    in >> n >> a;
     vector <int> T(n);
-    cin >> n >> a;
     
     for(int i = 0;i < n;i++){
         cin >> T[i];
