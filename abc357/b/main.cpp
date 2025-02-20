@@ -22,11 +22,11 @@ int main(){
     
     if(cnt_u > cnt_l){
         for(char& c : str){
-            if(c >= 'a')c += ('a' - 'A');
+            if(c >= 'a')c -= ('a' - 'A');
         }
     }else{
         for(char& c : str){
-            if(c > 'A')c -= ('a' - 'A');        
+            if(c < 'a')c += ('a' - 'A');        
         }
     }
     cout << str << endl;
