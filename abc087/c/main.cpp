@@ -22,7 +22,7 @@ int main(){
     }
     
     int s[2][MAXN + 1];
-    for(int i = 0;i < n;i++){
+    for(int i = 0;i < 2;i++){
         s[i][0] = 0;
         for(int j = 0;j < n;j++){
             s[i][j+1] = s[i][j] + a[i][j];
@@ -33,6 +33,7 @@ int main(){
     for (int j = 0; j < n; j++) {
     max_c = max(max_c, s[0][j + 1] + s[1][n] - s[1][j]);
     }
+
     cout << max_c << endl;
     return 0;
 }
