@@ -11,16 +11,17 @@ using namespace std;
 int main(){ 
     string s;
     cin >> s;
-
-        int cnt = 0;
-        for(int i = 0;i < s.size()-1;i++){
-            if(s[i] == 'i' && i+1 % 2 != 1){
-                cnt++;
-            }
-            if(s[i] == 'o' && i+1 % 2 != 0){
-                cnt++;
-            }
+    
+    int ans = 0;
+    char t = 'i';
+    for(int i = 0;i < s.size();i++){        
+        if(s[i] == t){
+            t = t == 'i' ? 'o':'i';
+        }else{
+            ans++;
         }
-        cout << cnt << endl;
+    }
+    if(t == 'o')ans++;
+    cout << ans << endl;
     return 0;
 }
