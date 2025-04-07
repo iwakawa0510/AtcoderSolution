@@ -10,28 +10,20 @@ using namespace std;
 using ll = long long;
 
 int main(){ 
-    int n,m;
+    ll n,m;
     cin >> n >> m;
 
-    ll ans = 1;
+    ll ans = 0;
     ll a_max = 1000000000;
-    ll tn = 0;
+    ll tn = 1;
 
-    for(int i = 0;i < m;i++){
-        if(m < 2){
-            ans = 1+n;
-            break;
-        }
-        if(i == 0){
-            continue;
-        }
-        if(i == 1){
-            tn = n;
-            ans += tn;
-            if(m < 2)continue;
-        }
-        tn = tn*n;
+    for(int i = 0;i <= m;i++){
         ans += tn;
+        if(a_max < ans){
+            cout << "inf" << endl;
+            return 0;
+        }
+        tn *= n;
     }
 
     if(ans <= a_max){
