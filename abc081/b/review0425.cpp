@@ -18,13 +18,13 @@ int main(){
                 
             }else{
                 b = false;
-                break;
+                break;// break句ではなくcoutしてreturn 0すればよい,
             }
             
         }
         ans++;
     }
-    ans--;
+    ans--;//coutをループ内に組み込めば不要なデクリメント,
 
     cout << ans << endl;
     return 0;
