@@ -13,7 +13,7 @@ using ll = long long;
 int main(){ 
     int q;
     cin >> q;
-    deque<int> a;
+    deque<ll> a;
     for(int i = 0;i < q;i++){
         int n,c,x,k;
         cin >> n;
