@@ -11,10 +11,10 @@ using namespace std;
 
 int main(){ 
     string s;
-    cin >> s;
+    cin >> s ;
     int m = s.size();
     int cnt = 0;
-    for(int i = 0;i < m;i++){
+    for(int i= 0;i < m;i++){
         pair<int,int> p;
         if(s[i] == '#'){
             if(cnt == 0){
