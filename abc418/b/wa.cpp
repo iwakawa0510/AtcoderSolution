@@ -19,7 +19,7 @@ int main(){
         if(!(s[i]=='t')){
             continue;
         }
-        for(int j = n;i < n;j--){
+        for(int j = n;;j--){
             if(!(s[j]=='t')){
                 continue;
             }
