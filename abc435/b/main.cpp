@@ -24,7 +24,7 @@ int main(){
                 sum += a[i];
             }
             cout << "index:"<< l <<" "<<  r << endl;
-            cout << sum << " " << sum%a[l]  << " " << sum%a[r] << endl;            
+            cout << sum << " " << sum%a[l]  << " " << sum%a[r] << endl;        
             if(sum%a[l] != 0 && sum%a[r] != 0){
                 ans++;
             }
