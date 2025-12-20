@@ -26,7 +26,7 @@ int main(){
     int k = 1;
     for(int i = 0;i < roop;i++){
         k++;
-        r = (r-1%n);
+        r = ((r-1+n)%n);
         c = (c+1%n);
         cout << r <<" "<< c << endl;
         // bool ok_grid = ok[(r-1%n)][(c+1%n)];
